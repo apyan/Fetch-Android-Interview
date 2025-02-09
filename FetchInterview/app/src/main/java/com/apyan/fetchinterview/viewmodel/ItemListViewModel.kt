@@ -21,9 +21,11 @@ class ItemListViewModel @Inject constructor(
     private val _loadingStatus: MutableStateFlow<LoadingStatus> = MutableStateFlow(LoadingStatus.LOADING)
     val loadingStatus = _loadingStatus.asStateFlow()
 
+    // Used to hold the original list data without any filtering
     private val _itemList: MutableStateFlow<List<Item>> = MutableStateFlow(emptyList())
     val itemList = _itemList.asStateFlow()
 
+    // HashMap of the filtered item list
     private val _hashedItemMap: MutableStateFlow<HashMap<Int, MutableList<Item>>> = MutableStateFlow(hashMapOf())
     val hashedItemMap = _hashedItemMap.asStateFlow()
 

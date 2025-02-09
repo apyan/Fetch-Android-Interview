@@ -22,7 +22,7 @@ fun LoadingScreen() {
             modifier = Modifier
                 .width(50.dp)
                 .align(Alignment.TopCenter)
-                .padding(horizontal = 50.dp),
+                .padding(top = 100.dp),
             color = MaterialTheme.colorScheme.secondary,
             trackColor = MaterialTheme.colorScheme.surfaceVariant,
         )

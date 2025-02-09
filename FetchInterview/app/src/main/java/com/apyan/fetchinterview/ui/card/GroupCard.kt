@@ -38,9 +38,9 @@ fun GroupCard(
                 modifier = Modifier
                     .padding(
                         vertical = 5.dp,
-                        horizontal = 20.dp
+                        horizontal = 25.dp
                     ),
-                text = String.format(stringResource(R.string.list_id_label), listID),
+                text = String.format(stringResource(id = R.string.list_id_label), listID),
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold
             )

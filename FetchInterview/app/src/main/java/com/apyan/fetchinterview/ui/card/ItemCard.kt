@@ -25,7 +25,7 @@ fun ItemCard(
     item: Item = Item()
 ) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .padding(
                 vertical = 2.dp,
@@ -50,7 +50,7 @@ fun ItemCard(
         item.id?.let {
             Text(
                 modifier = Modifier.padding(5.dp),
-                text = String.format(stringResource(R.string.id_label), it),
+                text = String.format(stringResource(id = R.string.id_label), it),
                 fontSize = 15.sp,
             )
         }
