@@ -59,7 +59,6 @@ dependencies {
     implementation(libs.adapter.rxjava2)
     implementation(libs.converter.gson)
 
-    implementation(libs.coil.compose)
     implementation(libs.material)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
@@ -70,13 +69,6 @@ dependencies {
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
     kapt(libs.dagger.android.processor)
-
-    // Room
-    implementation(libs.androidx.room.runtime)
-    annotationProcessor(libs.androidx.room.compiler)
-    kapt(libs.androidx.room.compiler)
-    implementation(libs.androidx.room.ktx)
-    implementation(libs.androidx.room.rxjava2)
 
     testImplementation(libs.truth)
 
