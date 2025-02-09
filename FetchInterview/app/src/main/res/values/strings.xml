@@ -3,4 +3,7 @@
 
     <string name="error_message">Connection not found.\nPlease try again.</string>
     <string name="retry">Retry</string>
+
+    <string name="list_id_label">List ID: %d</string>
+    <string name="id_label">ID: %d</string>
 </resources>

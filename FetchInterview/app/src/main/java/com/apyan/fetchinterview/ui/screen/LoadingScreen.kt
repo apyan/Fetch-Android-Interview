@@ -2,6 +2,7 @@ package com.apyan.fetchinterview.ui.screen
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
@@ -20,7 +21,8 @@ fun LoadingScreen() {
         CircularProgressIndicator(
             modifier = Modifier
                 .width(50.dp)
-                .align(Alignment.TopCenter),
+                .align(Alignment.TopCenter)
+                .padding(horizontal = 50.dp),
             color = MaterialTheme.colorScheme.secondary,
             trackColor = MaterialTheme.colorScheme.surfaceVariant,
         )

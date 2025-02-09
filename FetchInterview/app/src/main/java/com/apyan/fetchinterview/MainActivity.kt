@@ -3,16 +3,10 @@ package com.apyan.fetchinterview
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.apyan.fetchinterview.dagger.MainApplication
 import com.apyan.fetchinterview.ui.screen.ErrorScreen
@@ -39,7 +33,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             val loadingStatus = itemListViewModel.loadingStatus.collectAsStateWithLifecycle()
-            val itemListing = itemListViewModel.itemList.collectAsStateWithLifecycle()
+            val hashedItemMap = itemListViewModel.hashedItemMap.collectAsStateWithLifecycle()
 
             FetchInterviewTheme {
                 Box(
@@ -50,11 +44,9 @@ class MainActivity : ComponentActivity() {
                     when (loadingStatus.value) {
                         LoadingStatus.LOADING -> LoadingScreen()
                         LoadingStatus.SUCCESS -> {
-                            itemListing.value?.let {
-                                ItemListScreen(
-                                    itemListing = it
-                                )
-                            }
+                            ItemListScreen(
+                                itemMapListing = hashedItemMap.value
+                            )
                         }
                         LoadingStatus.ERROR -> {
                             ErrorScreen(
